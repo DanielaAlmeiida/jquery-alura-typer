@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Alura Typer</title>
+</head>
+<body>
+    <main class="container">
+        <h1 class="center">Alura Typer</h1>
+
+        <div class="phrase">
+            <p class="center" id="phrase">This phrase has five words.</p>
+    
+            <ul class="center">
+                <li> 
+                    <i class="small material-icons">description</i>
+                    <span id="phrase-length">0</span> words 
+                </li>
+                <li> 
+                    <i class="small material-icons">timer</i>
+                    <span id="character-phrase-length">0</span> characters 
+                </li>
+            </ul>
+        </div>
+        
+    
+        <div class="game">
+            <ul class="center">
+                <li>
+                    <span id="typing-time">3</span> seconds
+                </li>
+            </ul>
+        
+            <textarea id="text-field" rows="9" cols="70"></textarea>
+            
+            <div class="buttons">
+                <a class="btn-floating btn-large waves-effect waves-light red" id="btn-add">
+                    <i class="material-icons">add</i>
+                </a>
+                <a class="btn-floating btn-large waves-effect waves-light red" id="btn-restore">
+                    <i class="material-icons">restore</i>
+                </a>
+
+                <button id="restart-button" type="button" name="button">Restart</button>
+            </div>
+        
+            <ul class="center">
+                <li>
+                    <span id="word-counter">0</span> words 
+                </li>
+                <li> 
+                    <span id="character-counter">0</span> characters    
+                </li>
+            </ul>
+        </div>
+        
+    </main>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+</html>

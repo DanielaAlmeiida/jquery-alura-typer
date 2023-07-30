@@ -1,0 +1,24 @@
+.phrase p, textarea {
+    font-size: 1.2rem;
+}
+
+textarea {
+    height: 120px;
+}
+
+textarea:disabled {
+    background-color: rgb(221, 221, 221);
+}
+
+i {
+    vertical-align: middle;
+
+}
+
+.green-border{
+    border: 3px solid green;
+}
+
+.red-border{
+    border: 3px solid red;
+}
