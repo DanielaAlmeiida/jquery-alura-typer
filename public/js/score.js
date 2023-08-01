@@ -10,7 +10,7 @@ function insertScore() {
             <td>${amountOfCharacters}</td>
             <td>
                 <a href="#" class="remove-button">
-                    <i class="xsmall material-icons">delete</i>
+                    <i class="xsmall material-icons delete-icon">delete</i>
                 </a>
             </td>
         </tr>

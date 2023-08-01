@@ -1,27 +1,110 @@
-.phrase p, textarea {
-    font-size: 1.2rem;
+:root{
+    --mainBlue: #7ed2d8;
+    --lightPink: #e1bee7;
+}
+
+body {
+    background-color: #091520; 
+    font-family: Arial, sans-serif;
+    color:  #fff;
+}
+
+.green-border{
+    border: 2px solid #40b97f;
+}
+
+.red-border{
+    border: 2px solid #dd3c3c;
+}
+
+i {
+    vertical-align: middle;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.container, textarea {
+    padding: 20px;
+}
+
+.phrase, .game, .score-record {
+    border: 2px solid var(--mainBlue);
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: rgba(225, 190, 231, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: var(--mainBlue);
+    font-size: 48px;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 20px;
+}
+
+.phrase p {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.phrase li {
+    display: inline-block;
+    margin-right: 20px;
+    color: #ccc;
 }
 
 textarea {
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--mainBlue);
+    color: #fff;
+    resize: vertical;
+    max-height: 300px;
     height: 120px;
 }
 
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
 textarea:disabled {
-    background-color: rgb(221, 221, 221);
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: .6;
 }
 
 textarea:focus {
     outline: 0;
 }
-    
-i {
-    vertical-align: middle;
+
+.buttons {
+    text-align: center;
+    margin-top: 30px;
 }
 
-.green-border{
-    border: 3px solid green;
+.btn-floating {
+    background-color: var(--lightPink);
 }
 
-.red-border{
-    border: 3px solid red;
+.btn-floating i {
+    color: #1a1a1a;
+}
+
+th {
+    background-color: var(--mainBlue);
+    color: #1a1a1a;
+    border-radius: 0px;
+}
+
+td {
+    background-color: #151a27;
+}
+
+td, th {
+    padding: 10px;
+}
+
+.delete-icon {
+    color: var(--mainBlue);
 }
