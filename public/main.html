@@ -28,7 +28,8 @@
         
     
         <div class="game">
-            <input type="text" placeholder="Name" id="username"/>
+            <label for="username">Name</label>
+            <input type="text" placeholder="Insert your name" name="username" id="username"/>
 
             <ul class="center">
                 <li>
@@ -39,14 +40,9 @@
             <textarea id="text-field" rows="9" cols="70"></textarea>
             
             <div class="buttons">
-                <a class="btn-floating btn-large waves-effect waves-light red" id="btn-add">
-                    <i class="material-icons">add</i>
-                </a>
-                <a class="btn-floating btn-large waves-effect waves-light red" id="btn-restore">
+                <a class="btn-floating btn-large waves-effect waves-light red" id="restart-button">
                     <i class="material-icons">restore</i>
                 </a>
-
-                <button id="restart-button" type="button" name="button">Restart</button>
             </div>
         
             <ul class="center">
@@ -70,13 +66,13 @@
                         <th>Remove</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tableBody">
                     <tr>
                         <td>Daniela</td>
                         <td>12</td>
                         <td>40</td>
                         <td>
-                            <a href="#" id="remove-button">
+                            <a href="#" class="remove-button">
                                 <i class="xsmall material-icons">delete</i>
                             </a>
                         </td>
@@ -86,7 +82,7 @@
                         <td>10</td>
                         <td>30</td>
                         <td>
-                            <a href="#" id="remove-button">
+                            <a href="#" class="remove-button">
                                 <i class="xsmall material-icons">delete</i>
                             </a>
                         </td>
@@ -99,5 +95,8 @@
 
     <script src="./js/jquery.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/gameLogic.js"></script>
+    <script src="./js/score.js"></script>
+    <script src="./js/ui.js"></script>
 </body>
 </html>
