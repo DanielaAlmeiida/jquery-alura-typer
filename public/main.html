@@ -28,6 +28,8 @@
         
     
         <div class="game">
+            <input type="text" placeholder="Name" id="username"/>
+
             <ul class="center">
                 <li>
                     <span id="typing-time">3</span> seconds
@@ -56,11 +58,46 @@
                 </li>
             </ul>
         </div>
+
+        <section class="score-record">
+            <h3 class=center>Score record</h3>
+            <table class="centered bordered striped ">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Amount of words</th>
+                        <th>Amount of characters</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Daniela</td>
+                        <td>12</td>
+                        <td>40</td>
+                        <td>
+                            <a href="#" id="remove-button">
+                                <i class="xsmall material-icons">delete</i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Douglas</td>
+                        <td>10</td>
+                        <td>30</td>
+                        <td>
+                            <a href="#" id="remove-button">
+                                <i class="xsmall material-icons">delete</i>
+                            </a>
+                        </td>
+                    </tr>              
+                </tbody>
+            </table>
+        </section>
         
     </main>
 
     <script src="./js/jquery.js"></script>
     <script src="./js/main.js"></script>
-
 </body>
 </html>

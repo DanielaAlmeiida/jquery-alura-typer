@@ -10,9 +10,12 @@ textarea:disabled {
     background-color: rgb(221, 221, 221);
 }
 
+textarea:focus {
+    outline: 0;
+}
+    
 i {
     vertical-align: middle;
-
 }
 
 .green-border{

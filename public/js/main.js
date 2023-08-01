@@ -40,15 +40,19 @@ function startChronometer() {
             $("#typing-time").text(remainingTypingTime);
             
             if(remainingTypingTime < 1){
-                textField.attr("disabled", true);
                 clearInterval(idChronotemer);
-                restartButton.attr("disabled", false);
+                finishGame();
             }
     
         }, 1000);
     })
 }
 
+function finishGame() {
+    textField.attr("disabled", true);
+    restartButton.attr("disabled", false);
+    insertScore();
+}
 
 function restartGame() {
     textField.attr("disabled", false);
@@ -77,3 +81,30 @@ function borderControl(){
     })
 }
 
+
+
+function insertScore() {
+    var tableBody = $('.score-record').find("tbody");
+    var username = $('#username').val();
+    var amountOfWords = $('#word-counter').text();
+    var characterCounter = $('#character-counter').text();
+
+    var newScoreLine = "<tr>"+
+                            "<td>"+ username +"</td>"+
+                            "<td>"+ amountOfWords +"</td>"+
+                            "<td>"+ characterCounter +"</td>"+
+                            "<td>"+
+                                "<a href='#' id='remove-button'>"+
+                                    "<i class='xsmall material-icons'>delete</i>"
+                                "<a>"+
+                            "</td>"+
+                       "</tr>";
+    
+    tableBody.prepend(newScoreLine);
+
+}
+
+$('#remove-button').click(function(event){
+    event.preventDefault();
+    $(this).parent().parent().remove();
+})
