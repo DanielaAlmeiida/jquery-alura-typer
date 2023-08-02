@@ -7,6 +7,7 @@ body {
     background-color: #091520; 
     font-family: Arial, sans-serif;
     color:  #fff;
+    overflow: scroll;
 }
 
 .green-border{
@@ -107,4 +108,8 @@ td, th {
 
 .delete-icon {
     color: var(--mainBlue);
+}
+
+.score-record{
+    display: none;
 }

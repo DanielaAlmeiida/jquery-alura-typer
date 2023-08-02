@@ -14,3 +14,8 @@ function borderControl() {
     })
 }
 
+$('#score-record-button').click(showScoreRecord);
+
+function showScoreRecord() {
+    $('.score-record').stop().slideToggle(600);
+}

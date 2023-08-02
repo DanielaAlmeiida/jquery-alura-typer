@@ -18,11 +18,26 @@ function insertScore() {
 
     $('#tableBody').prepend(line);
     removeScore();
+    $('.score-record').slideDown(500);
+    scrollScoreRecord();
+
 }
 
 function removeScore() {
     $('.remove-button').click(function(event){
         event.preventDefault();
-        $(this).closest('tr').remove();
+
+        var line = $(this).closest('tr');
+        line.fadeOut(400);
+        setTimeout(() => {line.remove();}, 400)
     })
+}
+
+function scrollScoreRecord() {
+    var scoreRecordPosition = $('.score-record').offset().top;
+
+    $("html, body").animate(
+    {
+        scrollTop: scoreRecordPosition
+    }, 1000);
 }
